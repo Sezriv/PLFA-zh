@@ -254,7 +254,7 @@ We write `infix` to indicate that the operator does not associate to
 either the left or right, as it makes no sense to parse `1 ≤ 2 ≤ 3` as
 either `(1 ≤ 2) ≤ 3` or `1 ≤ (2 ≤ 3)`.
 -->
-<p>我们将 <code>_≤_</code> 的优先级设置为 4，所以它比优先级为 6 的 <code>_+_</code> 结合的更紧，此外， <code>1 + 2 ≤ 3</code> 将被解析为 <code>(1 + 2) ≤ 3</code>。我们用 <code>infix</code> 来表示运算符既不是左结合的， 也不是右结合的。因为 <code>1 ≤ 2 ≤ 3</code> 解析为 <code>(1 ≤ 2) ≤ 3</code> 或者 <code>1 ≤ (2 ≤ 3)</code> 都没有意义。</p>
+<p>我们将 <code>_≤_</code> 的优先级设置为 4，所以它不如优先级为 6 的 <code>_+_</code> 结合得紧，因而， <code>1 + 2 ≤ 3</code> 将被解析为 <code>(1 + 2) ≤ 3</code>。我们用 <code>infix</code> 来表示运算符既不是左结合的， 也不是右结合的。因为 <code>1 ≤ 2 ≤ 3</code> 解析为 <code>(1 ≤ 2) ≤ 3</code> 或者 <code>1 ≤ (2 ≤ 3)</code> 都没有意义。</p>
 <!--
 ## Decidability
 -->
