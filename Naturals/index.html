@@ -692,7 +692,7 @@ For example, let's multiply two and three:
 </pre>
 <!--
 The first line matches the inductive case by taking `m = 1` and `n = 3`,
-The second line matches the inductive case by taking `m = 0` and `n = 3`,
+the second line matches the inductive case by taking `m = 0` and `n = 3`,
 and the third line matches the base case by taking `n = 3`.
 Here we have omitted the signature declaring `_ : 2 * 3 ≡ 6`, since
 it can easily be inferred from the corresponding term.
@@ -1159,7 +1159,7 @@ required type of each:
 <pre><code>?0 : ℕ
 ?1 : ℕ</code></pre>
 <!--
-Going into hole 0 and type `C-c C-,` will display information on the
+Going into hole 0 and typing `C-c C-,` will display information on the
 required type of the hole, and what free variables are available:
 -->
 <p>移动至 0 号洞，按下 <code>C-c C-,</code> 会显示当前洞所需类型的具体信息，以及 可用的自由变量：</p>
@@ -1175,7 +1175,7 @@ filled, you can type `C-c C-space`, which will remove the hole:
 zero + n = n
 suc m + n = { }1</code></pre>
 <!--
-Again, going into hole 1 and type `C-c C-,` will display information on the
+Again, going into hole 1 and typing `C-c C-,` will display information on the
 required type of the hole, and what free variables are available:
 -->
 <p>同理，移动到 1 号洞并按下 <code>C-c C-,</code> 会显示当前洞所需类型的具体信息， 以及可用的自由变量：</p>
@@ -1226,9 +1226,9 @@ More pragmas
 <!--
 Including the lines
 -->
-<pre class="Agda"><a id="42192" class="Symbol">{-#</a> <a id="42196" class="Keyword">BUILTIN</a> <a id="42204" class="Keyword">NATPLUS</a> <a id="42212" href="../Naturals/#16265" class="Primitive Operator">_+_</a> <a id="42216" class="Symbol">#-}</a>
-<a id="42220" class="Symbol">{-#</a> <a id="42224" class="Keyword">BUILTIN</a> <a id="42232" class="Keyword">NATTIMES</a> <a id="42241" href="../Naturals/#23102" class="Primitive Operator">_*_</a> <a id="42245" class="Symbol">#-}</a>
-<a id="42249" class="Symbol">{-#</a> <a id="42253" class="Keyword">BUILTIN</a> <a id="42261" class="Keyword">NATMINUS</a> <a id="42270" href="../Naturals/#26165" class="Primitive Operator">_∸_</a> <a id="42274" class="Symbol">#-}</a>
+<pre class="Agda"><a id="42196" class="Symbol">{-#</a> <a id="42200" class="Keyword">BUILTIN</a> <a id="42208" class="Keyword">NATPLUS</a> <a id="42216" href="../Naturals/#16265" class="Primitive Operator">_+_</a> <a id="42220" class="Symbol">#-}</a>
+<a id="42224" class="Symbol">{-#</a> <a id="42228" class="Keyword">BUILTIN</a> <a id="42236" class="Keyword">NATTIMES</a> <a id="42245" href="../Naturals/#23102" class="Primitive Operator">_*_</a> <a id="42249" class="Symbol">#-}</a>
+<a id="42253" class="Symbol">{-#</a> <a id="42257" class="Keyword">BUILTIN</a> <a id="42265" class="Keyword">NATMINUS</a> <a id="42274" href="../Naturals/#26165" class="Primitive Operator">_∸_</a> <a id="42278" class="Symbol">#-}</a>
 </pre>
 <!--
 tells Agda that these three operators correspond to the usual ones,
@@ -1253,10 +1253,10 @@ A more efficient representation of natural numbers uses a binary
 rather than a unary system.  We represent a number as a bitstring:
 -->
 <p>使用二进制系统能提供比一进制系统更高效的自然数表示。我们可以用一个比特串来表示一个数：</p>
-<pre class="Agda"><a id="43534" class="Keyword">data</a> <a id="Bin"></a><a id="43539" href="../Naturals/#43539" class="Datatype">Bin</a> <a id="43543" class="Symbol">:</a> <a id="43545" class="PrimitiveType">Set</a> <a id="43549" class="Keyword">where</a>
-  <a id="Bin.⟨⟩"></a><a id="43557" href="../Naturals/#43557" class="InductiveConstructor">⟨⟩</a> <a id="43560" class="Symbol">:</a> <a id="43562" href="../Naturals/#43539" class="Datatype">Bin</a>
-  <a id="Bin._O"></a><a id="43568" href="../Naturals/#43568" class="InductiveConstructor Operator">_O</a> <a id="43571" class="Symbol">:</a> <a id="43573" href="../Naturals/#43539" class="Datatype">Bin</a> <a id="43577" class="Symbol">→</a> <a id="43579" href="../Naturals/#43539" class="Datatype">Bin</a>
-  <a id="Bin._I"></a><a id="43585" href="../Naturals/#43585" class="InductiveConstructor Operator">_I</a> <a id="43588" class="Symbol">:</a> <a id="43590" href="../Naturals/#43539" class="Datatype">Bin</a> <a id="43594" class="Symbol">→</a> <a id="43596" href="../Naturals/#43539" class="Datatype">Bin</a>
+<pre class="Agda"><a id="43538" class="Keyword">data</a> <a id="Bin"></a><a id="43543" href="../Naturals/#43543" class="Datatype">Bin</a> <a id="43547" class="Symbol">:</a> <a id="43549" class="PrimitiveType">Set</a> <a id="43553" class="Keyword">where</a>
+  <a id="Bin.⟨⟩"></a><a id="43561" href="../Naturals/#43561" class="InductiveConstructor">⟨⟩</a> <a id="43564" class="Symbol">:</a> <a id="43566" href="../Naturals/#43543" class="Datatype">Bin</a>
+  <a id="Bin._O"></a><a id="43572" href="../Naturals/#43572" class="InductiveConstructor Operator">_O</a> <a id="43575" class="Symbol">:</a> <a id="43577" href="../Naturals/#43543" class="Datatype">Bin</a> <a id="43581" class="Symbol">→</a> <a id="43583" href="../Naturals/#43543" class="Datatype">Bin</a>
+  <a id="Bin._I"></a><a id="43589" href="../Naturals/#43589" class="InductiveConstructor Operator">_I</a> <a id="43592" class="Symbol">:</a> <a id="43594" href="../Naturals/#43543" class="Datatype">Bin</a> <a id="43598" class="Symbol">→</a> <a id="43600" href="../Naturals/#43543" class="Datatype">Bin</a>
 </pre>
 <!--
 For instance, the bitstring
@@ -1304,9 +1304,9 @@ Confirm that these both give the correct answer for zero through four.
 -->
 <p>对于前者，用没有前导零的比特串来表示正数，并用 <code>⟨⟩ O</code> 表示零。 验证这两个函数都能对零到四给出正确结果。</p>
 <!--
-<pre class="Agda"><a id="44788" class="Comment">-- Your code goes here</a>
+<pre class="Agda"><a id="44792" class="Comment">-- Your code goes here</a>
 </pre>-->
-<pre class="Agda"><a id="44824" class="Comment">-- 请将代码写在此处。</a>
+<pre class="Agda"><a id="44828" class="Comment">-- 请将代码写在此处。</a>
 </pre>
 <!--
 Standard library
@@ -1319,7 +1319,7 @@ them, and basic operators upon them, are defined in the standard
 library module `Data.Nat`:
 -->
 <p>在每一章的结尾，我们将展示如何在标准库中找到相关的定义。 自然数，它们的构造子，以及用于自然数的基本运算符，都在标准库模块 <code>Data.Nat</code> 中定义：</p>
-<pre class="Agda"><a id="45195" class="Comment">-- import Data.Nat using (ℕ; zero; suc; _+_; _*_; _^_; _∸_)</a>
+<pre class="Agda"><a id="45199" class="Comment">-- import Data.Nat using (ℕ; zero; suc; _+_; _*_; _^_; _∸_)</a>
 </pre>
 <!--
 Normally, we will show an import as running code, so Agda will
