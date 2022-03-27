@@ -564,7 +564,7 @@ We often need to "rebase" a type derivation, replacing a derivation
 as every variable that appears in `Γ` also appears in `Δ`, and with
 the same type.
 -->
-<p>我们常常会需要去 “重建” 一个类型推演过程， 也就是将一个类型推演 <code>Γ ⊢ M ⦂ A</code> 替换为对应的推演 <code>Δ ⊢ M ⦂ A</code>。 我们能够这样做的前提是每个在上下文 <code>Γ</code> 中出现的变量同时也出现在上下文 <code>Δ</code> 中， 且它们的类型相同。</p>
+<p>我们常常会需要去 「重建」 一个类型推演过程， 也就是将一个类型推演 <code>Γ ⊢ M ⦂ A</code> 替换为对应的推演 <code>Δ ⊢ M ⦂ A</code>。 我们能够这样做的前提是每个在上下文 <code>Γ</code> 中出现的变量同时也出现在上下文 <code>Δ</code> 中， 且它们的类型相同。</p>
 <!--
 Three of the rules for typing (lambda abstraction, case on naturals,
 and fixpoint) have hypotheses that extend the context to include a
@@ -581,7 +581,7 @@ with this situation, we first prove a lemma showing that if one context maps to 
 this is still true after adding the same variable to
 both contexts:
 -->
-<p>对自然数分项和不动点亦是如此。 要处理这类情况，我们首先证明一条论述 “如果一个上下文和另一个上下文之间存在映射， 在对两者添加同一个变量后映射仍然存在” 的引理：</p>
+<p>对自然数分项和不动点亦是如此。 要处理这类情况，我们首先证明一条论述 「如果一个上下文和另一个上下文之间存在映射， 在对两者添加同一个变量后映射仍然存在」 的引理：</p>
 <pre class="Agda"><a id="ext"></a><a id="18844" href="../Properties/#18844" class="Function">ext</a> <a id="18848" class="Symbol">:</a> <a id="18850" class="Symbol">∀</a> <a id="18852" class="Symbol">{</a><a id="18853" href="../Properties/#18853" class="Bound">Γ</a> <a id="18855" href="../Properties/#18855" class="Bound">Δ</a><a id="18856" class="Symbol">}</a>
   <a id="18860" class="Symbol">→</a> <a id="18862" class="Symbol">(∀</a> <a id="18865" class="Symbol">{</a><a id="18866" href="../Properties/#18866" class="Bound">x</a> <a id="18868" href="../Properties/#18868" class="Bound">A</a><a id="18869" class="Symbol">}</a>     <a id="18875" class="Symbol">→</a>         <a id="18885" href="../Properties/#18853" class="Bound">Γ</a> <a id="18887" href="../Lambda/#43802" class="Datatype Operator">∋</a> <a id="18889" href="../Properties/#18866" class="Bound">x</a> <a id="18891" href="../Lambda/#43802" class="Datatype Operator">⦂</a> <a id="18893" href="../Properties/#18868" class="Bound">A</a> <a id="18895" class="Symbol">→</a>         <a id="18905" href="../Properties/#18855" class="Bound">Δ</a> <a id="18907" href="../Lambda/#43802" class="Datatype Operator">∋</a> <a id="18909" href="../Properties/#18866" class="Bound">x</a> <a id="18911" href="../Lambda/#43802" class="Datatype Operator">⦂</a> <a id="18913" href="../Properties/#18868" class="Bound">A</a><a id="18914" class="Symbol">)</a>
     <a id="18920" class="Comment">-----------------------------------------------------</a>
@@ -637,7 +637,7 @@ As before, let `ρ` be the name of the map that takes evidence that
 on the evidence that `M` is well typed in `Γ`.  Let's unpack the
 first three cases:
 -->
-<p>像之前一样，令 <code>ρ</code> 为 “变量 <code>x</code> 出现在上下文 <code>Γ</code> 中的论据” 至 “变量 <code>x</code> 出现在 <code>Δ</code> 的论据” 的映射。 我们对项 <code>M</code> 在上下文 <code>Γ</code> 中是良赋型的论据做归纳。我们首先来分析前三种情况：</p>
+<p>像之前一样，令 <code>ρ</code> 为 「变量 <code>x</code> 出现在上下文 <code>Γ</code> 中的论据」 至 「变量 <code>x</code> 出现在 <code>Δ</code> 的论据」 的映射。 我们对项 <code>M</code> 在上下文 <code>Γ</code> 中是良赋型的论据做归纳。我们首先来分析前三种情况：</p>
 <!--
 * If the term is a variable, then applying `ρ` to the evidence
 that the variable appears in `Γ` yields the corresponding evidence that
@@ -1649,7 +1649,7 @@ Milner, who used denotational rather than operational semantics. He
 introduced `wrong` as the denotation of a term with a type error, and
 showed _well-typed terms don't go wrong_.)
 -->
-<p>Felleisen 与 Wright 通过进行性和保型性引入了证明，并将其总结为 <strong>良类型的项不会卡住</strong> 的口号。 （他们提及了 Robin Milner 早期的工作，他使用指称而非操作语义。 他引入了“错误”作为带有类型错误的术语的指称，并展示了 <strong>良类型的项不会出错</strong>。）</p>
+<p>Felleisen 与 Wright 通过进行性和保型性引入了证明，并将其总结为 <strong>良类型的项不会卡住</strong> 的口号。 （他们提及了 Robin Milner 早期的工作，他使用指称而非操作语义。 他引入了「错误」作为带有类型错误的术语的指称，并展示了 <strong>良类型的项不会出错</strong>。）</p>
 <!--
 #### Exercise `stuck` (practice)
 -->
@@ -1818,7 +1818,7 @@ the presence of these rules?  For each property, write either
 "remains true" or "becomes false." If a property becomes
 false, give a counterexample:
 -->
-<p>在这些规则存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 “仍为真” 或 “变为假”。 如果一个属性变为假，请举出一个反例：</p>
+<p>在这些规则存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 「仍为真」 或 「变为假」。 如果一个属性变为假，请举出一个反例：</p>
 <!--
   - Determinism of `step`
 
@@ -1851,7 +1851,7 @@ the presence of this rule?  For each one, write either
 "remains true" or else "becomes false." If a property becomes
 false, give a counterexample:
 -->
-<p>在此规则存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 “仍为真” 或 “变为假”。 如果一个属性变为假，请举出一个反例：</p>
+<p>在此规则存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 「仍为真」 或 「变为假」。 如果一个属性变为假，请举出一个反例：</p>
 <!--
   - Determinism of `step`
 
@@ -1875,7 +1875,7 @@ true in the absence of this rule?  For each one, write either
 "remains true" or else "becomes false." If a property becomes
 false, give a counterexample:
 -->
-<p>假设我们从步进关系中移除了规则 <code>ξ·₁</code>。 在此规则不存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 “仍为真” 或 “变为假”。 如果一个属性变为假，请举出一个反例：</p>
+<p>假设我们从步进关系中移除了规则 <code>ξ·₁</code>。 在此规则不存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 「仍为真」 或 「变为假」。 如果一个属性变为假，请举出一个反例：</p>
 <!--
   - Determinism of `step`
 
@@ -1920,7 +1920,7 @@ the presence of this rule?  For each one, write either
 "remains true" or else "becomes false." If a property becomes
 false, give a counterexample:
 -->
-<p>在此规则存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 “仍为真” 或 “变为假”。 如果一个属性变为假，请举出一个反例：</p>
+<p>在此规则存在的情况下，以下哪些属性仍然成立？ 对于每个属性，写下 「仍为真」 或 「变为假」。 如果一个属性变为假，请举出一个反例：</p>
 <!--
   - Determinism of `step`
 
